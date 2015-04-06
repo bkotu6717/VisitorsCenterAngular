@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :visitors, only: [:index, :create, :destroy], defaults: { format: :json }
+  root 'visitors#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
